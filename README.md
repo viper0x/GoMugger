@@ -7,13 +7,13 @@ The regexes list will be updated whenever I find/community shares interesting re
 There's a very good ready regexes file and most of them has been collected by me from different repositories (big shout-out to the people who created/posted them).
 
 ## Installation
-Using Go ([Go 1.16+ compiler](https://golang.org/doc/install) should be installed & configured!):
+Using Go ([Go compiler](https://golang.org/doc/install) should be installed & configured!):
 ```
-$ go get -u github.com/viper0x/gomugger && wget https://raw.githubusercontent.com/viper0x/gomugger/main/regex.json
+$ go install github.com/viper0x/gomugger@latest && wget https://raw.githubusercontent.com/viper0x/gomugger/main/regex.json
 ```
 If the above didn't work:
 ```
-$ go install github.com/viper0x/gomugger@latest && wget https://raw.githubusercontent.com/viper0x/gomugger/main/regex.json
+$ go get -u github.com/viper0x/gomugger && wget https://raw.githubusercontent.com/viper0x/gomugger/main/regex.json
 ```
 
 Or by manual building:
