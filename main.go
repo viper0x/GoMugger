@@ -29,6 +29,7 @@ var silent bool
 var outputDir string
 var customReg string
 var regList string
+var allReg bool
 
 func Banner() {
 	fmt.Println(`
@@ -56,6 +57,9 @@ func parseArguments() {
 	flag.StringVar(&regList, "rL", "regex.json", "Use another json regex list instead of regex.json")
 	flag.StringVar(&regList, "regex-list", "regex.json", "Use another json regex list instead of regex.json")
 
+	flag.BoolVar(&allReg, "a", false, "Will check for all regexes including regexes named (Credentials Disclosure)")
+	flag.BoolVar(&allReg, "all", false, "Will check for all regexes including regexes named (Credentials Disclosure)")
+
 
     flag.Parse()
 }
@@ -81,6 +85,7 @@ func main() {
 			"  -s, --silent                Show results only without printing banner",
 			"  -r, --regex <regex>         Use custom regex instead of using regex.json list",
 			"  -rL, --regex-list <file>    Use another json regex list instead of regex.json (default regex.json)",
+			"  -a, --all <file>            Will check for all regexes including regexes named (Credentials Disclosure)",
 			"  -h, --help                  Display help\n",
 			"Examples:",
 			"  cat targets.txt | gomugger",
@@ -137,6 +142,11 @@ func main() {
 					json.Unmarshal(byteResult, &regexes)
 
 					for i := 0; i < len(regexes.Regexes); i++ {
+						if !allReg {
+							if regexes.Regexes[i].Name == "Credentials Disclosure" {
+								continue
+							}
+						}
 						matchContent(regexes.Regexes[i].Name, regexes.Regexes[i].Regex, target, string(content))
 					}
 				}
