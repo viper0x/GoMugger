@@ -85,7 +85,7 @@ func main() {
 			"  -s, --silent                Show results only without printing banner",
 			"  -r, --regex <regex>         Use custom regex instead of using regex.json list",
 			"  -rL, --regex-list <file>    Use another json regex list instead of regex.json (default regex.json)",
-			"  -a, --all <file>            Will check for all regexes including regexes named (Credentials Disclosure)",
+			"  -a, --all                   Will check for all regexes including regexes named (Credentials Disclosure)",
 			"  -h, --help                  Display help\n",
 			"Examples:",
 			"  cat targets.txt | gomugger",
