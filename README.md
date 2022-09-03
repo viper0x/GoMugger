@@ -9,11 +9,11 @@ There's a very good ready regexes file and most of them has been collected by me
 ## Installation
 Using Go ([Go 1.16+ compiler](https://golang.org/doc/install) should be installed & configured!):
 ```
-$ go get -u github.com/viper0x/gomugger
+$ go get -u github.com/viper0x/gomugger && wget https://raw.githubusercontent.com/viper0x/gomugger/main/regex.json
 ```
 If the above didn't work:
 ```
-$ go install github.com/viper0x/gomugger@latest
+$ go install github.com/viper0x/gomugger@latest && wget https://raw.githubusercontent.com/viper0x/gomugger/main/regex.json
 ```
 
 Or by manual building:
@@ -23,7 +23,7 @@ $ cd gomugger
 $ go build .
 $ cat targets.txt | ./gomugger
 ```
-
+NOTE: make sure you are running the tool in the same directory where `regex.json` exist. Or you can use `-rL <path>` instead.
 ## Usage
 ```
 $ gomugger -h
