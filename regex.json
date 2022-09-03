@@ -56,23 +56,8 @@
 		},
 
 		{
-			"name": "Facebook OAuth",
-			"regex": "[f|F][a|A][c|C][e|E][b|B][o|O][o|O][k|K].*['|\"][0-9a-f]{32}['|\"]"
-		},
-
-		{
 			"name": "GitHub",
 			"regex": "[g|G][i|I][t|T][h|H][u|U][b|B].*['|\"][0-9a-zA-Z]{35,40}['|\"]"
-		},
-
-		{
-			"name": "Generic API Key",
-			"regex": "[a|A][p|P][i|I][_]?[k|K][e|E][y|Y].*['|\"][0-9a-zA-Z]{32,45}['|\"]"
-		},
-
-		{
-			"name": "Generic Secret",
-			"regex": "[s|S][e|E][c|C][r|R][e|E][t|T].*['|\"][0-9a-zA-Z]{32,45}['|\"]"
 		},
 
 		{
@@ -86,18 +71,8 @@
 		},
 
 		{
-			"name": "Google Cloud Platform OAuth",
-			"regex": "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com"
-		},
-
-		{
 			"name": "Google Drive API Key",
 			"regex": "AIza[0-9A-Za-z\\-_]{35}"
-		},
-
-		{
-			"name": "Google Drive OAuth",
-			"regex": "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com"
 		},
 
 		{
@@ -111,11 +86,6 @@
 		},
 
 		{
-			"name": "Google Gmail OAuth",
-			"regex": "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com"
-		},
-
-		{
 			"name": "Google OAuth Access Token",
 			"regex": "ya29\\.[0-9A-Za-z\\-_]+"
 		},
@@ -123,11 +93,6 @@
 		{
 			"name": "Google YouTube API Key",
 			"regex": "AIza[0-9A-Za-z\\-_]{35}"
-		},
-
-		{
-			"name": "Google YouTube OAuth",
-			"regex": "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com"
 		},
 
 		{
@@ -203,11 +168,6 @@
 		{
 			"name": "Twitter Access Token",
 			"regex": "[t|T][w|W][i|I][t|T][t|T][e|E][r|R].*[1-9][0-9]+-[0-9a-zA-Z]{40}"
-		},
-
-		{
-			"name": "Twitter OAuth",
-			"regex": "[t|T][w|W][i|I][t|T][t|T][e|E][r|R].*['|\"][0-9a-zA-Z]{35,44}['|\"]"
 		},
 
 		{
