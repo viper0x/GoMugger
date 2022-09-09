@@ -1,10 +1,5 @@
 # GoMugger
-
-![text-1662149638843](https://user-images.githubusercontent.com/43915187/188277728-fefe46d4-6848-4cce-aaee-115037648b7d.png)
-
-A fast tool written in Golang used to check for sensitive/juicy information within web pages content.
-The regexes list will be updated whenever I find/community shares interesting regexes.
-There's a very good ready regexes file and most of them has been collected by me from different repositories (big shout-out to the people who created/posted them).
+A fast tool written in Golang used to check for sensitive/juicy information within web pages content. There's a very good ready regexes (regex.json) file and most of them has been collected by me from different repositories (big shout-out to the people who created/posted them). The regex.json list will be updated whenever I find/community shares interesting regexes.
 
 ## Installation
 Using Go ([Go compiler](https://golang.org/doc/install) should be installed & configured!):
@@ -63,20 +58,6 @@ $ cat targets.txt | gomugger -c 50
 ```
 
 ## Append/Use different regexes
-### Appending new regex:
-You only have to edit the `regex.json` file and add your regex using the following format:
-```
-{
- "name": "<NEW REGEX NAME>",
- "regex": "<REGEX>"
-}
-```
-
-### Using custom regex against targets:
-```
-$ cat targets.txt | gomugger -r "REGEX"
-```
-
 ### Using different regexes list:
 Create `.json` file and add regexes using the following format. Then you can use `-rL` followed by the json file name to use the custom created list:
 ```
@@ -93,4 +74,21 @@ Create `.json` file and add regexes using the following format. Then you can use
     }
   ]
 }
+```
+```
+cat targets.txt | gomugger -rL <FILE.json>
+```
+
+### Appending new regex:
+You have to edit the `regex.json` file and add your regex using the following format:
+```
+{
+ "name": "<NEW REGEX NAME>",
+ "regex": "<REGEX>"
+}
+```
+
+### Using custom regex against targets:
+```
+$ cat targets.txt | gomugger -r "REGEX"
 ```
